@@ -1,0 +1,14 @@
+.Mcard-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.barra{
+    width: 100px;
+    height: 4px;
+    background-color: brown;
+    top: 10px; 
+    left: 19px; 
+    position: relative;
+}
+

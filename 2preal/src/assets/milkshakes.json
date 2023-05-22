@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "name":"Crunchy Butterscotch",
+        "description":"Butterscotch & Cashews",
+        "precio":"Bs 18"
+    },
+    {
+        "id":2,
+        "name":"Supermans Secret",
+        "description":"Peanut Butter . Dry fruit . With Vanilla Ice Cream",
+        "precio":"Bs 21"
+    },
+    {
+        "id":3,
+        "name":"Wonder Woman Shake",
+        "description":"Saffron . With Vanilla Ice Cream",
+        "precio":"Bs 19"
+    }
+]
