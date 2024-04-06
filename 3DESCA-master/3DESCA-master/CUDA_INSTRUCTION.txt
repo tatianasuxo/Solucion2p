@@ -1,0 +1,4 @@
+1. Download CUDA from http://developer.nvidia.com/cuda-toolkit
+  * CUDA Toolkit Installer will probably want to install other things related to your system - ex. old GPU drivers. If you have everything up-to-date, I suggest unticking all other options and leaving only CUDA group.
+
+2. 3DESCA builds against Compute Capability 3.0 (older versions are deprecated). If your GPU does not support it, visit 3DESCA_CUDA Properties > CUDA C/C++ > Device and change Code Generation field from "compute_30,sm_30" to lower versions. Ex. Compute Cap 2.0 GPU (lowest supported) should have "compute_20,sm_20". During build a warning about deprecated Compute Capability will appear, you can safely ignore it.
