@@ -1,0 +1,23 @@
+1. download and install MsMPI & MsMPI SDK (https://msdn.microsoft.com/en-us/library/bb524831(v=vs.85).aspx)
+from here (https://www.microsoft.com/en-us/download/details.aspx?id=52981)
+
+2. Install both
+
+3. Download boost 1.63.0 from here (https://sourceforge.net/projects/boost/?source=typ_redirect) (MUST BE 1_63)
+4. unzip boost_1_63_0 folder into 3DESCA main dir
+5. launch bootstrap.bat
+6. create file user-config.jam with line "using mpi ;" (without quotes) in the user folder (e.x. C:\Users\myUser\user-config.jam)
+7. If your MPI installation directories are different, go to boost_1_63_0/tools/build/src/tools/mpi.jam and change lines below line 248
+
+"""
+    # Paths for Microsoft MPI
+    local ms_mpi_path_native = "C:\\Program Files\\Microsoft MPI" ;
+    local ms_mpi_sdk_path_native = "C:\\Program Files (x86)\\Microsoft SDKs\\MPI" ;
+"""
+
+8. go to boost_1_63_0, open cmd and run:
+bjam.exe --with-mpi --with-serialization --toolchain=msvc-11.0 address-model=64
+9. After all these steps, x64 version should be buildable. If You want to run x86 version, just remove 'address-model=64' from the command and rerun it
+
+10. to run mpi based application run the following in cmd:
+mpiexec -n 2 3DESCA.exe

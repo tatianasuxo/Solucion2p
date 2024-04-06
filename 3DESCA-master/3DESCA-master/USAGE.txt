@@ -1,0 +1,21 @@
+3DESCA.exe takes 2 optional arguments:
+1. path to file you are going to encrypt - default "..\\..\\..\\lorem.txt"
+2. number of repetitions - default 1000
+Example of running:
+3DESCA.exe lorem.txt 5
+
+=================================
+
+3DESCA_MPI.exe takes the same arguments as 3DESCA.exe, however to build and run it you need to follow instructions in MPI_INSTRUCTION.txt. Should be run with mpiexec (-n to set number of threads).
+Example of running:
+mpiexec -n 2 3DESCA_MPI.exe lorem.txt 5
+
+=================================
+
+3DESCA_OMP.exe takes 3 optional arguments:
+1. number of threads - default 1
+2. path to file you are going to encrypt - default "..\\..\\..\\lorem.txt"
+3. number of repetitions - default 1000
+
+Example of running:
+3DESCA_OMP.exe 2 lorem.txt 5 
